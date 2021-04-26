@@ -1,0 +1,45 @@
+ubuntu@ubuntu:~$ mkdir TEST
+ubuntu@ubuntu:~$ mkdir -p TEST/TEST1
+ubuntu@ubuntu:~$ mkdir -p TEST/TEST2
+ubuntu@ubuntu:~$ cd TEST
+ubuntu@ubuntu:~/TEST$ cd TEST1
+ubuntu@ubuntu:~/TEST/TEST1$ cat > file1.txt
+my name is mohamed salah senousy 
+ubuntu@ubuntu:~/TEST/TEST1$ cat > file2.txt
+faculty of computers and infromation 
+ubuntu@ubuntu:~/TEST/TEST1$ cat > file3.txt
+Ramadan kareem
+ubuntu@ubuntu:~/TEST/TEST1$ cd ..
+ubuntu@ubuntu:~/TEST$ cd ..
+ubuntu@ubuntu:~$ cd TEST
+ubuntu@ubuntu:~/TEST$ cd TEST2
+ubuntu@ubuntu:~/TEST/TEST2$ cat > file2.txt
+number of users : 1
+number of files : 5
+ubuntu@ubuntu:~/TEST/TEST2$ cd ..
+ubuntu@ubuntu:~/TEST$ cd ..
+ubuntu@ubuntu:~$ ls a* A*
+ls: cannot access 'a*': No such file or directory
+ls: cannot access 'A*': No such file or directory
+ubuntu@ubuntu:~$ cat > aml.txt
+aml
+ubuntu@ubuntu:~$ cat > Aml.txt
+Aml
+ubuntu@ubuntu:~$ ls a* A*
+aml.txt  Aml.txt
+ubuntu@ubuntu:~$ ls -1 | wc -l
+11
+ubuntu@ubuntu:~$ date
+Mon 26 Apr 2021 09:51:35 AM PDT
+ubuntu@ubuntu:~$ ls
+aml.txt  Aml.txt  Desktop  Documents  Downloads  Music  Pictures  Public  Templates  TEST  Videos
+ubuntu@ubuntu:~$ pwd
+/home/ubuntu
+ubuntu@ubuntu:~$ cat > mohamed.txt
+mohamed 
+salah 
+senousy
+mohamed
+ubuntu@ubuntu:~$ wc mohamed.txt
+ 4  4 32 mohamed.txt
+ubuntu@ubuntu:~$ cp /HOME/TEST/TEST1/file1.txt /HOME/TEST/TEST2
