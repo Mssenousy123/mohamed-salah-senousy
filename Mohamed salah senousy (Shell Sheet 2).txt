@@ -1,0 +1,140 @@
+
+1- 
+#!/bin/bash
+echo "Please enter number"
+read n
+m=$(( $n / 3600 ))
+b=$(( $n % 3600))
+v=$(( $b / 60 ))
+c=$(( $b % 60 ))
+echo "$m "
+echo "$v "
+echo "$c "
+
+echo " $m : $v : $c "
+-----------------------------------------------------------------------------------------------
+2-
+#!/bin/sh
+
+echo "Please enter a temperature in degrees Celsius: "
+read degree
+val=`expr $degree \* 5`
+val3=`expr $val / 9`
+val2=`expr $val3 + 32` 
+echo "$val2" 
+----------------------------------------------------------------------------------------------
+3-
+#!/bin/bash
+echo "Please enter salary:"
+read n
+b=$n
+
+if [ $b -gt 2000 ]
+then
+      m=`expr $b \* 15`
+      s=`expr $m / 100`
+      r=`expr $n - $s`
+      echo " $r "
+elif [ $b -lt 2000 -a $b -gt 1000 ]
+then 
+      c=`expr $b \* 10`
+      p=`expr $c / 100`
+      r=`expr $n - $p`
+      echo " $r "
+else
+      echo "No tax" 
+fi
+-------------------------------------------------------------------------------------------
+4-
+#!/bin/bash
+echo "Please enter a number:"
+read m
+echo "enter a power:"
+read n
+v=$m
+x=$n
+result=1
+while [ $x -gt 0 ]
+do
+   result=`expr $v \* $result`
+   x=`expr $x - 1`
+done
+echo "result =  $result"
+---------------------------------------------------------------------------------------------
+5-
+
+#!/bin/bash
+echo "Please enter number:"
+read n
+b=$n
+temp=`expr $b % 2`
+if [ $b -eq 2 ]
+then 
+      echo " $b is a primer number  "
+elif [ $temp -eq 0 ]
+then
+
+      echo " $b is not a primer number  "
+
+else
+      echo " $b is  a primer number  "
+fi
+----------------------------------------------------------------------------------------------
+
+6-
+#!/bin/bash
+echo "Please Enter a number or 0 To exit : " | tr "\n" " "
+read value
+if [ $value -lt 0 ]
+then 
+      echo "Please enter positive number "
+      read value
+else 
+      continue
+fi       
+sum=0
+number=0
+average=0
+while [  $value != 0 ]; 
+do              
+            
+	sum=`expr $value + $sum`
+	number=`expr $number + 1`
+	echo "Please Enter a number or 0 To exit :" | tr "\n" " " 
+	read value
+if [ $value -lt 0 ]
+then 
+      echo "please enter positive number "
+      read value
+else 
+      continue
+fi       
+done
+
+average=`expr $sum / $number` 
+
+echo "The average of values is : $average "
+-----------------------------------------------------------------------------------------
+7-
+#!/bin/bash
+echo "Please enter a number"
+read n
+d=0
+re=0
+sum=0
+num=0
+while [ $n -gt 0 ]
+do
+    d=$(( $n % 10 ))
+    re=$(( $re *\ 10 + $d ))
+    n=$(( $n / 10 ))
+    sum=$(($sum + $d))
+    num=$(($num + 1))
+done
+ave=$(( $sum / $num ))
+echo "Reverse number of entered digit is $re"
+echo "sum of the digits $sum"
+echo "average of the digits $ave"
+
+
+
